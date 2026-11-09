@@ -102,6 +102,8 @@ wt = numerator / denominator
 
 # STEP-4 : Calculate the bias (intercept)
 
+# we know that, ŷ = wx + b --> ȳ = wx̄ + b
+# --> b =  ȳ - wx̄
 bias = mean_y - (wt * mean_x)
 
 # STEP-5 : Display the trained result
@@ -114,6 +116,6 @@ print("Bias : ",bias)
 
 new_area = float(input("\nEnter house area in sq.ft : "))
 
-predicated_price = wt * new_area + bias # y = wx + b
+predicated_price = wt * new_area + bias # ŷ = wx + b
 
 print("Predicated House Price :  ₹", round(predicated_price, 2), "lakhs")
